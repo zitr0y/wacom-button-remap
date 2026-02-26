@@ -40,7 +40,9 @@ systemctl --user enable --now wacom-remap.service
 
 ## GNOME Configuration
 
-On GNOME 47+, Mutter intercepts stylus button events. You may need to set the secondary button action so `BTN_STYLUS2` passes through correctly:
+On GNOME 48+, no additional configuration is needed — the default `secondary-button-action` works correctly.
+
+On GNOME 47, you may need to explicitly set the secondary button action:
 
 ```bash
 # Find your stylus ID in dconf
