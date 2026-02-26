@@ -38,22 +38,6 @@ cp wacom-remap.service ~/.config/systemd/user/wacom-remap.service
 systemctl --user enable --now wacom-remap.service
 ```
 
-## GNOME Configuration
-
-On GNOME 48+, no additional configuration is needed — the default `secondary-button-action` works correctly.
-
-On GNOME 47, you may need to explicitly set the secondary button action:
-
-```bash
-# Find your stylus ID in dconf
-dconf dump /org/gnome/desktop/peripherals/stylus/
-
-# Set secondary button action (replace STYLUS_ID with your ID)
-dconf write /org/gnome/desktop/peripherals/stylus/STYLUS_ID/secondary-button-action "'middle'"
-```
-
-Then in your drawing app, map "Stylus button 2" to the desired action (e.g. eraser).
-
 ## Tested on
 
 - Lenovo Yoga with Wacom pen and multitouch sensor (056a:51b9)
