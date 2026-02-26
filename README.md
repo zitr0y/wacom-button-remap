@@ -1,5 +1,7 @@
 # Wacom Pen Button Remapper
 
+ADVISORY: THIS IS COMPLETELY VIBE-CODED. BUT IT DID FIX MY STYLUS ISSUES WITH THINKPAD YOGA 4TH GEN AND MADE THE ERASER USABLE IN RNOTE.
+
 Remaps the Wacom stylus eraser proximity event (`BTN_TOOL_RUBBER`) to a standard button press (`BTN_STYLUS2`).
 
 ## Problem
@@ -37,6 +39,7 @@ sudo chmod +x /usr/local/bin/wacom-remap.py
 cp wacom-remap.service ~/.config/systemd/user/wacom-remap.service
 systemctl --user enable --now wacom-remap.service
 ```
+Then in your drawing app, map "Stylus button 2" to the desired action (e.g. eraser).
 
 ## Tested on
 
